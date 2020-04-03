@@ -54,14 +54,15 @@ app.get("/weather", (req, res) => {
         error
       });
     } else {
-      forecast(longitude, latitude, (error, foreCastData) => {
+      forecast(longitude, latitude, (error, { foreCast, imgSrc }) => {
         if (error) {
           return res.send({
             error
           });
         } else {
           res.send({
-            forecast: foreCastData,
+            forecast: foreCast,
+            icon: imgSrc,
             place,
             address: req.query.address
           });

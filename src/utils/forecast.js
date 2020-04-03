@@ -8,6 +8,7 @@ const forecast = (lon, lat, callback) => {
     "&lon=" +
     lon +
     "&units=metric&APPID=ff3d6fce1ce3cfaf8e430935bcc2a8e2";
+  console.log(baseUrl + url);
   request(
     { baseUrl: baseUrl, url: url, json: true },
     (error, response, body) => {
@@ -16,14 +17,22 @@ const forecast = (lon, lat, callback) => {
         callback("Unable to connect to weather service!", undefined);
       } else {
         if (response && response.statusCode == 200) {
-          const forecast =
-            "It is currently " +
-            body.main.temp +
-            " degree in [" +
-            body.name +
-            "], and weather is " +
-            body.weather[0].description +
-            ".";
+          const forecast = {
+            foreCast:
+              body.weather[0].description +
+              " throughout the day.It is currently " +
+              body.main.temp +
+              " degrees out. The higest today is " +
+              body.main.temp_max +
+              " with a lowest of " +
+              body.main.temp_min +
+              ".",
+            imgSrc:
+              "http://openweathermap.org/img/wn/" +
+              body.weather[0].icon +
+              "@2x.png"
+          };
+
           callback(undefined, forecast);
         } else {
           callback(body.message, undefined);

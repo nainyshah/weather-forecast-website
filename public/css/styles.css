@@ -25,7 +25,9 @@ header {
   margin-top: 16px;
   margin-bottom: 48px;
 }
-
+.imgSize {
+  width: 30px;
+}
 h1 {
   font-size: 64px;
   margin-bottom: 16px;

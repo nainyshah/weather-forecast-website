@@ -28,7 +28,8 @@ app.get("", (req, res) => {
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About",
-    body: "In this section I will update you all about myself",
+    body:
+      "This site created by Syed Raza. It uses data from mapbox.com and openweathermap.org!",
     footer: "Created by Syed Raza"
   });
 });

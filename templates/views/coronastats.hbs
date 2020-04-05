@@ -9,7 +9,9 @@
 </head>
 
 <body>
+    {{!-- <div id="backgroundImage"> --}}
     <div class="main-content">
+
         {{> header}}
         <p>
             Check current status of corona virus
@@ -19,15 +21,17 @@
             <button type="submit">Search</button>
             <button type="reset">Clear</button>
         </form>
-        <p id="coronaMsg"></p>
-        <p id="cases">
-        </p>
-        <p id="deaths"></p>
-
+        <div id="coronaPrecautions">
+            <br><br><br>
+            <p id="coronaMsg"></p>
+            <p id="cases">
+            </p>
+            <p id="deaths"></p>
+        </div>
     </div>
-
     {{> footer}}
     <script type="text/javascript" src="/js/corona.js"></script>
+    {{!-- </div> --}}
 </body>
 
 </html>

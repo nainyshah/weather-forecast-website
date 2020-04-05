@@ -13,7 +13,9 @@ body {
 .main-content {
   flex-grow: 1;
 }
-
+.aParent {
+  display: flex;
+}
 footer {
   color: #888888;
   border-top: 1px solid #eeeeee;
@@ -50,4 +52,67 @@ button {
   background: #888888;
   color: white;
   padding: 8px;
+}
+
+/* #backgroundImage {
+  z-index: 1;
+} */
+
+/* #backgroundImage:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(/img/92.jpg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  /* min-height: 100vh; 
+  height: 50%;
+  width: 50%;
+} */
+
+.main {
+  position: relative;
+  flex-grow: 1;
+  margin: auto;
+  z-index: -1;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.header-shadow {
+  background-image: url(/img/92.jpg);
+  background-repeat: repeat-y; /* for vertical repeat */
+  background-repeat: repeat-x; /* for horizontal repeat */
+  height: 80vh;
+  width: 70vh;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+#coronaPrecautions {
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  height: 440px;
+  padding: 20px 280px 20px 20px;
+  margin: 0 auto;
+  color: black;
+  /* background: #000; */
+  text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.5);
+}
+#coronaPrecautions:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(/img/92.jpg);
+  opacity: 0.2;
 }

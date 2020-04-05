@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Corona Virus Stats</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/weather.png">
+    </script>
+</head>
+
+<body>
+    <div class="main-content">
+        {{> header}}
+        <p>
+            Check current status of corona virus
+        </p>
+        <form>
+            <input placeholder="Enter Country">
+            <button type="submit">Search</button>
+            <button type="reset">Clear</button>
+        </form>
+        <p id="coronaMsg"></p>
+        <p id="cases">
+        </p>
+        <p id="deaths"></p>
+
+    </div>
+
+    {{> footer}}
+    <script type="text/javascript" src="/js/corona.js"></script>
+</body>
+
+</html>

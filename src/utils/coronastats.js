@@ -3,7 +3,7 @@ const request = require("request");
 const coronaStats = (countryName, callback) => {
   const baseUrl = "https://covid-193.p.rapidapi.com";
   const url = "/statistics?country=" + encodeURIComponent(countryName);
-  const apiKey = "9b14e54f43msh25dc8c0677cb3b8p1f39c5jsn4dd2be92fb4a";
+  const apiKey = "121";
   const options = {
     method: "GET",
     url: baseUrl + url,
